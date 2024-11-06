@@ -5,11 +5,33 @@ public class Main {
         for (int i = 0; i < str.length(); i++) { //проходимся по всем символам строки
             char ch = str.charAt(i); //Программа берет символ из строки str, который находится на позиции i, и сохраняет его в переменной ch
             if (Character.isDigit(ch)) {
+
                 int digit = Character.getNumericValue(ch);
                 sum = sum + digit;
             }
         }
         System.out.println(sum);
     }
-}
+    public static int sumCh(int a) {
+        int count = 0;
+        for (int i = 0; i < 11; i++) {
 
+            if (i % 2 == 0) {
+                count += i;
+            }
+        }
+        return count;
+    }
+
+    public static int sumNechet(int b) {
+        int count2 = 0;
+        for (int i = 0; i < 11; i++) {
+
+            if (i % 2 != 0) {
+                count2 += i;
+            }
+        }
+        return count2;
+    }
+
+}
